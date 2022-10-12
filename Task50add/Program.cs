@@ -63,7 +63,7 @@ for (int i = 0; i < generateArray.GetLength(0); i++)
     {
         for (int j = 0; j < generateArray.GetLength(1); j++)
         {
-            int k = i * 4 + j;
+            int k = i * userWidth + j;
             if(userNumber == k)
             {
               Console.Write($"Элемент с номером {userNumber} : {generateArray[i, j]} ");  
