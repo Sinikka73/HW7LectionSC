@@ -26,18 +26,25 @@ void printColorData(string data)//доб цвета
     Console.ResetColor();
 }
 
+void print2ColorData(string data)//доб цвета
+{
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.Write(data);
+    Console.ResetColor();
+}
+
 void print2DArray(double[,] arrayToPrint)
 {
     Console.WriteLine();
     Console.Write(" \t");
-    for (int i = 0; i < arrayToPrint.GetLength(1); i++)//идентификатор
+    for (int i = 0; i < arrayToPrint.GetLength(1); i++)//номер столбца
     {
         printColorData(i + "\t");
     }
     Console.WriteLine();
     for (int i = 0; i < arrayToPrint.GetLength(0); i++)
     {
-        printColorData(i + "\t");// табуляция
+        print2ColorData(i + "\t");//номер строки
         for (int j = 0; j < arrayToPrint.GetLength(1); j++)
         {
             Console.Write (arrayToPrint[i,j] + "\t");
